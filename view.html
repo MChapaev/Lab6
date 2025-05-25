@@ -1,4 +1,3 @@
-<!-- Добавим в каждый блок новую кнопку -->
 <h2>1. Claims by Client (Full Name + Passport)</h2>
 <form action="/cgi-bin/view.py" method="get">
   <input type="hidden" name="query_type" value="by_client">
@@ -10,7 +9,6 @@
   <button type="submit" name="export" value="json">Export as JSON</button>
 </form>
 
-<!-- Аналогично для остальных -->
 <h2>2. All Active Claims (Policy Not Expired)</h2>
 <form action="/cgi-bin/view.py" method="get">
   <input type="hidden" name="query_type" value="active">
