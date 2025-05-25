@@ -1,0 +1,26 @@
+<!-- Добавим в каждый блок новую кнопку -->
+<h2>1. Claims by Client (Full Name + Passport)</h2>
+<form action="/cgi-bin/view.py" method="get">
+  <input type="hidden" name="query_type" value="by_client">
+  <label>Full Name:</label><br>
+  <input type="text" name="full_name" required><br>
+  <label>Passport Number:</label><br>
+  <input type="text" name="passport_number" required><br><br>
+  <button type="submit">Search</button>
+  <button type="submit" name="export" value="json">Export as JSON</button>
+</form>
+
+<!-- Аналогично для остальных -->
+<h2>2. All Active Claims (Policy Not Expired)</h2>
+<form action="/cgi-bin/view.py" method="get">
+  <input type="hidden" name="query_type" value="active">
+  <button type="submit">View Active Claims</button>
+  <button type="submit" name="export" value="json">Export as JSON</button>
+</form>
+
+<h2>3. All Claims Grouped by Policy Type</h2>
+<form action="/cgi-bin/view.py" method="get">
+  <input type="hidden" name="query_type" value="group_by_type">
+  <button type="submit">Group by Policy Type</button>
+  <button type="submit" name="export" value="json">Export as JSON</button>
+</form>

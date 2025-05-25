@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete Client Record</title>
+</head>
+<body>
+
+  <h1>Delete Client Record</h1>
+
+  <form action="/cgi-bin/delete.py" method="post">
+    <label for="client_id">Client ID to Delete:</label><br>
+    <input type="number" id="client_id" name="client_id" required><br><br>
+
+    <button type="submit">Delete</button>
+  </form>
+
+</body>
+</html>
