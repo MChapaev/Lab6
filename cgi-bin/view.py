@@ -36,6 +36,8 @@ def print_html_table(rows, columns, title):
     print("<tr>" + "".join(f"<th>{html.escape(col)}</th>" for col in columns) + "</tr>")
     for row in rows:
         print("<tr>" + "".join(f"<td>{html.escape(str(cell))}</td>" for cell in row) + "</tr>")
+
+    print("<a href=\"/index.html\">Go back</a><br><br>")
     print("</table></body></html>")
 
 try:
@@ -80,7 +82,6 @@ try:
 
     else:
         raise Exception("Invalid query type.")
-
     rows = cursor.fetchall()
     columns = [desc[0] for desc in cursor.description]
 
